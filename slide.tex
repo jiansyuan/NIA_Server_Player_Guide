@@ -1,0 +1,173 @@
+\documentclass{beamer}
+\usepackage{ctex, hyperref}
+\usepackage[T1]{fontenc}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+
+\author{\calligra JiansYuan}
+\title{我的世界 NIA 服务器}
+\subtitle{玩家游戏指南}
+\institute{NIA Server Research \& Development Group}
+\date{\today}
+\usepackage{NIAServer}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+
+\begin{document}
+
+\kaishu
+\begin{frame} 
+    \titlepage
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[width=0.33\linewidth]{pic/NIA_Server_Logo.pdf}
+        \end{center} 
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+
+\section{关于 NIA 服务器} 
+
+\subsection{梦想与现实}
+\begin{frame}{什么是 NIA？}
+    \begin{itemize}[<+-| alert@+>]
+        \item 我们是一个成熟的 MC 服务器创作团队。
+        \item 在 2019 年 1 月 28 号那个晚上，梦开始了。
+        \item 2020 年中旬，向往开放与梦想的我们迈入国际服领域。
+        \item 开源，是为了 MC。\newline 我们公开源代码给更多服主灵感、启发。 \newline \url{https://www.github.com/NIANIANKNIA/NIASERVER-V4/}
+    \end{itemize}
+\end{frame}
+
+\subsection{理想与抱负}
+\begin{frame}{公益、原创、非凡}
+    \begin{itemize}[<+-| alert@+>]
+        \item 自始至终，我们一直以 “公益·原创·非凡” 作为我们服务器的核心发展理念
+        \item 公益---我们一直认为，一个好的服务器真正的作用是带给玩家美好记忆，带给玩家快乐的地方，而不是盈利赚钱的地方，所以我们承诺服务器永远不会有任何充值项目！  
+        \item 原创---好的服务器并不是一味的将其他人的成果堆叠在一起，我们创作团队深知这一点，所以服务器所使用的地图、大部分插件均由开发团队自制，我们可以保障服务器所有功能体验的一致性。
+        \item 非凡---虽然我们不一定做到最好，但我们一定会努力做到最好！
+    \end{itemize}
+\end{frame}
+
+\section{游玩指南}
+
+\subsection{前置准备}
+\begin{frame}{前置准备}
+    \begin{itemize}
+        \item 请先加服务器主群：724360499
+        \item 也可以添加服主QQ：1020317403
+        \item 还有一些其他群。
+        \begin{itemize}
+            \item 服务器审核群：371417932 
+            \item 服务器备份群：258515673 
+            \item 服务器OP招募群：543363488
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{安装游戏}
+\begin{frame}{安装游戏}
+    \begin{itemize}[<+-| alert@+>]
+        \item 首先，你应当下载服务器当前对应的基岩版我的世界
+        \item 基岩版几乎支持全平台，你可以根据自己的设备前往 Miscrosoft Store（WIN10）、App Store（IOS）、Google Play（Android） 购买相应的我的世界基岩版并下载
+        \item 如果你能力有限，没有足够的钱购买我的世界基岩版，我建议你前往 Minebbs 下载相应的破解版（由于某些原因貌似只有安卓可以使用破解版）
+        \item 如果没有特殊说明，服务器版本一般为当期最新的正式版
+        \item \href{https://mc.minebbs.com/\#/}{\color{purple}{点这里到 Minebbs 下载！}}
+    \end{itemize}
+\end{frame}
+
+\subsection{加入白名单}
+\begin{frame}{加入白名单}
+    \begin{itemize}
+        \item 加入服务器官方群聊（某些特殊时期服务器可能会开启审核，此时需要您填写一个简单的问卷，提交后才可以获得主群链接），进入服务器群聊之后，请首先发送 \color{purple}{“\#申请白名”} 然后发送您的XboxID，最后发送 \color{purple}{“\#确定”} 即可成功添加白名单！
+    \end{itemize}
+\end{frame}
+
+\subsection{进入服务器}
+\begin{frame}{请开始你的游戏！}
+    \begin{itemize}
+        \item 根据群公告的ip地址以及端口，点开主页面-游戏-服务器-添加服务器，输入服务器群群公告提供的ip及端口，（名称随便填）点击保存即可，然后直接点击这个服务器就可以加入游玩啦!
+        \item 但是，草率的进入服务器并不明智。
+        \begin{itemize}
+            \item 在游玩之前游览服务器图鉴是一件非常重要的事情！服务器是空岛玩法，了解基本玩法后再前往服务器游玩！
+            \item 这里有一切你想要的服务器玩法和资料：\href{https://docs.mcnia.top/zh-CN/Illustrated.html}{\color{purple}{NIA 服务器图鉴}}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{遇到问题？}
+\begin{frame}{Q? but A!}
+    \begin{itemize}[<+-| alert@+>]
+        \item 使用移动网络（流量）进入服务器，却显示没有连接互联网？\newline 
+        设置中打开“使用移动网络游戏”即可解决
+        \item 显示首先应当通过'微软服务器验证'才可以游玩？\newline 
+        删掉后台、关闭游戏重新进入，多次失败建议换网
+        \item 显示“您未被邀请在此服务器上游玩”？\newline 
+        请检查自己白名单添加的XboxID是否完整、正确（区分大小写）
+    \end{itemize}
+\end{frame}
+
+\section{规章制度}
+\begin{frame}{规章制度}
+    \begin{itemize}[<+-| alert@+>]
+        \item “矩不正，不可以为方；规不正，不可以为圆。”
+        \item 制定规矩，旨在维护游戏体验，创造极致游戏氛围。
+        \item 见：\href{https://docs.mcnia.top/zh-CN/regulation.html}{\color{purple}{NIA 服务器规章制度v3.1}}
+    \end{itemize}
+\end{frame}
+
+\section{其他内容}
+\begin{frame}
+    \begin{itemize}
+        \item 还有待补充！
+    \end{itemize}
+\end{frame}
+ 
+\section{参考文献}
+\begin{frame}[allowframebreaks]
+    \begin{itemize}
+        \item 懒。
+    \end{itemize}
+    % \bibliographystyle{alpha}
+    %\bibliography{ref}
+    % \tiny\bibliographystyle{alpha}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        {\Huge\calligra The End}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[htpb] 
+        \begin{center}
+            \includegraphics[width=0.666\linewidth]{pic/NIA_Server_Logo.pdf}
+        \end{center} 
+    \end{figure} 
+\end{frame}
+
+\end{document}
